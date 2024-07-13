@@ -1,34 +1,8 @@
 #include <stdio.h>
 
-void check(int a,int b, int c)
-{
-
-    int max;
-    max = ((a>b) ? a:b);
-    max = (max>c)? max:c;
-    printf("%d\n",max);
-
-    if(max>= a+b+c-max)
-    {
-        printf("Invaid\n");
-    }
-    else if(a==b && b==c)
-    {
-        printf("Equilateral\n");
-    }
-    else if(a==b || b==c || c==a)
-    {
-        printf("Isosceles\n");
-    }
-    else
-    {
-        printf("Scalene\n");
-    }
-}
-
 int main()
 {
-    int a,b,c;
+    int a,b,c,max;
 
     
 
@@ -41,7 +15,25 @@ int main()
         {
             break;
         }
-        check(a,b,c);
+        max = ((a>b) ? a:b);
+        max = (max>c)? max:c;
+
+        if(max>= a+b+c-max)
+        {
+            printf("Invalid\n");
+        }
+        else if(a==b && b==c)
+        {
+            printf("Equilateral\n");
+        }
+        else if(a==b || b==c || c==a)
+        {
+            printf("Isosceles\n");
+        }
+        else
+        {
+            printf("Scalene\n");
+        }
 
     }
 
