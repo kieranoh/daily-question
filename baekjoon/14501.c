@@ -32,9 +32,9 @@ int main() {
     sum = check_sum(arr,n);
     printf("%d\n",sum);
 
-    for(int i=0; i<n; i++) { 
-        printf("%d ",history[i]);
-    }
+    // for(int i=0; i<n; i++) { 
+    //     printf("%d ",history[i]);
+    // }
 
     return 0;
 
